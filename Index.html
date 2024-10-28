@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroSense</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to AeroSense</h1>
+            <p>Real-time air quality data and meteorological analysis at your fingertips.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="upload" class="image-upload">
+            <h2>Upload an Image for Air Quality Detection</h2>
+            <input type="file" id="imageUpload" accept="image/*">
+            <button onclick="uploadImage()">Upload Image</button>
+            <div class="image-container">
+                <img id="uploadedImage" src="" alt="Uploaded Image" style="display: none;">
+            </div>
+        </section>
+
+        <section id="services" class="air-quality">
+            <h2>Air Quality Categories</h2>
+            <div class="air-quality-details">
+                <div class="air-quality-item good">
+                    <h3>Good Air Quality</h3>
+                    <p>Air quality is considered good when pollution levels are minimal. Breathing is not likely to be affected.</p>
+                </div>
+                <div class="air-quality-item medium">
+                    <h3>Medium Air Quality</h3>
+                    <p>Air quality is acceptable; however, some pollutants may be present. Sensitive individuals may experience discomfort.</p>
+                </div>
+                <div class="air-quality-item lower-medium">
+                    <h3>Lower Medium Air Quality</h3>
+                    <p>Air quality is not ideal and may affect people with sensitivities. Consider taking precautions if you fall into sensitive groups.</p>
+                </div>
+                <div class="air-quality-item bad">
+                    <h3>Bad Air Quality</h3>
+                    <p>High pollution levels; everyone may start to experience health effects. Avoid prolonged outdoor activities.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer id="contact">
+        <p>&copy; 2024 AeroSense. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

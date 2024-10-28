@@ -1,0 +1,163 @@
+/* Base Styles - Mobile First Approach */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa; /* Light cyan background */
+    color: #00796b; /* Teal text color */
+}
+
+nav {
+    background-color: #00796b; /* Teal background */
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 5px 0;
+}
+
+nav ul li a {
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background-image: url('pic.jpg'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff; /* White text for contrast */
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero-content h1, .hero-content p {
+    margin: 0;
+    color: black;
+}
+
+.container {
+    padding: 20px;
+}
+
+.image-upload {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.image-upload input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #00796b; /* Teal border */
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.air-quality {
+    margin: 20px 0;
+}
+
+.air-quality-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.air-quality-item {
+    background-color: #ffffff; /* White background */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.air-quality-item h3 {
+    margin-top: 0;
+}
+
+footer {
+    background-color: #00796b; /* Teal background */
+    color: #ffffff; /* White text */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Media Queries */
+
+/* Small Phones (320px and up) */
+@media (min-width: 320px) {
+    .hero {
+        padding: 40px 15px;
+    }
+}
+
+/* Large Phones and Small Tablets (480px and up) */
+@media (min-width: 480px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .image-upload {
+        text-align: center;
+    }
+}
+
+/* Tablets (768px and up) */
+@media (min-width: 768px) {
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .air-quality-details {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .air-quality-item {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+/* Small Desktops and Large Tablets (992px and up) */
+@media (min-width: 992px) {
+    .air-quality-details {
+        flex-direction: row;
+    }
+
+    .air-quality-item {
+        flex: 1 1 calc(25% - 15px);
+    }
+}
+
+/* Large Desktops (1200px and up) */
+@media (min-width: 1200px) {
+    .hero {
+        padding: 80px 30px;
+    }
+
+    .air-quality-item {
+        flex: 1 1 calc(20% - 20px);
+    }
+}

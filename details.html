@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroSense - Image Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>AeroSense</h1>
+        <p>AI-ML Based Air Quality Prediction - Image Details</p>
+    </header>
+
+    <div class="container">
+        <section class="image-details">
+            <h2>Image Analysis Results</h2>
+            <img id="detailedImage" src="" alt="Uploaded Image" style="display: block; max-width: 100%; height: auto;">
+            <p id="imageDetails">Loading details...</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 AeroSense. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const imageSrc = localStorage.getItem('uploadedImageSrc');
+            const details = "Here you can add details about the air quality based on the uploaded image.";
+            
+            if (imageSrc) {
+                document.getElementById('detailedImage').src = imageSrc;
+                document.getElementById('imageDetails').textContent = details;
+            } else {
+                document.getElementById('imageDetails').textContent = "No image data available.";
+            }
+        });
+    </script>
+</body>
+</html>
