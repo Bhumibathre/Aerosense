@@ -4,7 +4,7 @@ function uploadImage() {
     if (file) {
         const reader = new FileReader();
         reader.onload = function (e) {
-            const image = document.getElementById('uploadedImage');
+            const image = document.getElementById('uploadedImage'); 
             image.src = e.target.result;
             image.style.display = 'block';
 
