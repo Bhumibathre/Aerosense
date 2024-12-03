@@ -9,7 +9,7 @@
             image.style.display = 'block';
 
             // Redirect to another page with image data
-            // In a real application, you might send the image to a server and handle the response
+            // In a real application, you might send the image to a server and handle the response 
             window.location.href = 'details.html'; // Redirect to details page
         };
         reader.readAsDataURL(file);
