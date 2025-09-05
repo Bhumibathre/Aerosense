@@ -1,4 +1,5 @@
- function uploadImage() { 
+
+function uploadImage() { 
     const fileInput = document.getElementById('imageUpload');
     const file = fileInput.files[0];   
     if (file) {
@@ -17,3 +18,4 @@
         alert('Please select an image file.');
     }
 }
+
