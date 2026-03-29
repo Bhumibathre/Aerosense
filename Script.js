@@ -3,7 +3,7 @@ function uploadImage() {
     const fileInput = document.getElementById('imageUpload');
     const file = fileInput.files[0];   
     if (file) {
-        const reader = new FileReader();
+        const reader = new FileReader(); 
         reader.onload = function (e) { 
             const image = document.getElementById('uploadedImage');           
             image.src = e.target.result;
